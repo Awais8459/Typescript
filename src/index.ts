@@ -3,8 +3,10 @@ import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import userRoutes from './routes/userRoute';
 
+
 const app = express();
 const PORT = process.env.PORT || 3000;
+
 
 app.use(bodyParser.json());
 

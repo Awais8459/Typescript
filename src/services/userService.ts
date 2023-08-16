@@ -1,5 +1,6 @@
 import UserModel, { IUser } from '../models/userModel';
-
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
 class UserService {
   async createUser(user: IUser): Promise<IUser> {
     return await UserModel.create(user);
@@ -20,6 +21,11 @@ class UserService {
   async deleteUser(id: string): Promise<void> {
     await UserModel.findByIdAndDelete(id);
   }
+
+
+  
+
+
 }
 
 export default new UserService();

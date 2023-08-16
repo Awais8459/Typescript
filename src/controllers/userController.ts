@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import UserService from '../services/userService';
+import jwt from 'jsonwebtoken';
 
 class UserController {
   async createUser(req: Request, res: Response): Promise<void> {
@@ -54,6 +55,7 @@ class UserController {
       res.status(500).json({ error: 'Server error' });
     }
   }
+
 }
 
 export default new UserController();
