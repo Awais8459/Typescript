@@ -1,0 +1,2 @@
+npx ts-node src/index.ts
+http://localhost:3000/users
