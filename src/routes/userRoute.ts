@@ -1,6 +1,5 @@
 import express from 'express';
 import UserController from '../controllers/userController';
-import jwt from 'jsonwebtoken';
 const router = express.Router();
 
 router.post('/', UserController.createUser);
