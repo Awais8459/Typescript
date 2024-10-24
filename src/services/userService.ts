@@ -21,11 +21,6 @@ class UserService {
   async deleteUser(id: string): Promise<void> {
     await UserModel.findByIdAndDelete(id);
   }
-
-
-  
-
-
 }
 
 export default new UserService();
